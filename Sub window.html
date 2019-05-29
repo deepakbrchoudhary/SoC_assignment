@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>My window</title>
+        <style>
+            
+        </style>
+       <script>
+       function searchUrl()
+       {
+           var url = document.getElementById("t1").value;
+           alert("Do you want to search " + url + " on internet" );
+           window.open(url, "frame1");
+       }
+       function resize()
+       {
+          var frame = document.getElementById("f1");
+           var width = document.getElementById("t2").value;
+           var height = document.getElementById("t3").value;
+           alert("Do you want to change width to " + width +"px and height to "+ height +"px");
+           frame.style.width = (width) + "px";
+           frame.style.height = (height) + "px";
+
+
+       }
+       
+       
+       
+       
+       </script>
+    </head>
+<body bgcolor="black">
+<h1 align="center"><font color='red'> My First SubWindow </font></h1>
+<table align="center" border='2' width="100%">
+<font color='blue'>  
+<th><a href="https://www.google.com/webhp?igu=1" target='frame1'>Google</a></th>
+<th><a href='https://www.wikipedia.org/' target='frame1'>WIKIPEDIA</a></th>
+<th><a href="https://www.zee5.com/" target="frame1">Zee5</a></th>
+
+
+</table>
+<br>
+<hr color="yellow"> 
+<form>
+    Write your url here<input type='test' id='t1'><br>
+    <input type='button' value='GO!' id='b1' onclick='searchUrl()'> <br>
+    Want to change the frame size!? Go on, write down the pixels below<br>
+    Width <input type='text' id='t2'>   Height <input type='text' id='t3'><br>
+    <input type="button" value="Change" id='b2' onclick='resize()'><br>
+    
+</form>
+
+</font> 
+<br><hr color="yellow">
+
+    <center>
+        <iframe  width="50%" height="50%" name="frame1" id='f1' >
+        </iframe>
+    </center>
+    
+
+</body>
+</html>
